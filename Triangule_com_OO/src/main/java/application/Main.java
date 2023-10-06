@@ -1,4 +1,4 @@
-package org;
+package application;
 
 import entities.triangule;
 
@@ -20,16 +20,16 @@ public class Main {
         X.A = sc.nextDouble();
         X.B = sc.nextDouble();
         X.C = sc.nextDouble();
-        double P = (X.A + X.B + X.C) / 2.0 ;
-        Double AreaX = Math.sqrt(P * (P- X.A) * (P - X.B) * (P - X.C));
+
+        Double AreaX = X.area();
 
         System.out.printf(" Triangule X area : %.2f%n", AreaX);
         System.out.println("Enter the mesures of triangule Y : ");
         Y.A = sc.nextDouble();
         Y.B = sc.nextDouble();
         Y.C = sc.nextDouble();
-        P = (Y.A + Y.B + Y.C) / 2.0 ;
-        Double AreaY = Math.sqrt(P * (P- Y.A) * (P - Y.B) * (P - Y.C));
+
+        Double AreaY = Y.area();
         System.out.printf(" Triangule Y area : %.2f%n", AreaY);
 
         if (AreaX > AreaY){
