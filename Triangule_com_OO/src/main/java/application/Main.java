@@ -10,18 +10,15 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        triangule X;
-        triangule Y;
-
-        X = new triangule();
-        Y = new triangule();
+        triangule X = new triangule();
+        triangule Y = new triangule();
 
         System.out.println("Enter the mesures of triangule X : ");
         X.A = sc.nextDouble();
         X.B = sc.nextDouble();
         X.C = sc.nextDouble();
 
-        Double AreaX = X.area();
+        Double AreaX = X.areaTriangule();
 
         System.out.printf(" Triangule X area : %.2f%n", AreaX);
         System.out.println("Enter the mesures of triangule Y : ");
@@ -29,7 +26,7 @@ public class Main {
         Y.B = sc.nextDouble();
         Y.C = sc.nextDouble();
 
-        Double AreaY = Y.area();
+        Double AreaY = Y.areaTriangule();
         System.out.printf(" Triangule Y area : %.2f%n", AreaY);
 
         if (AreaX > AreaY){
